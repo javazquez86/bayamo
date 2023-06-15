@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  nombre = 'Julio Antonio';
-  cantidad_ruedas=3;
+  nombre: string = '';
+  apellidos : string = '';
+
+  getNombreApellidos(){
+    return this.nombre + ' ' + this.apellidos;
+  }
 }

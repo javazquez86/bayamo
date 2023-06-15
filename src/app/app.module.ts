@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AvioncitoComponent } from './avioncito/avioncito.component';
+import { RuedaComponent } from './avioncito/rueda/rueda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AvioncitoComponent
+    AvioncitoComponent,
+    RuedaComponent
   ],
   imports: [
     BrowserModule,
