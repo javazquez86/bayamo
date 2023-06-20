@@ -1,14 +1,19 @@
+<!-- generate card html -->
 <div class="card">
   <div class="card-header">
     <h4>Avioncito</h4>
+    <h4>Avioncito {{ codigo_seg | certificado }}</h4>
   </div>
   <div class="card-body">
     <div [ngClass]="tipo=='danger'?'danger':'info'">
-      <h3>Información</h3>
+      <h3 id="h3Bonito">Información</h3>
       <h4 class="seleccionada">Rueda seleccionada: {{seleccionada}}</h4>
       <h4>Evaluación: {{evaluacion}}</h4>
+      <h4 class="seleccionada">Puerta seleccionada: {{puerta_seleccionada}}</h4>
+      <h2>Estado de las puertas: {{estado_puerta}}</h2>
     </div>
-    <app-rueda
+    <!--<app-rueda #cuba [identificador]="'delantera-izquierda'" [marca]="'Michelin'" [precio]="300"></app-rueda>-->
+      <app-rueda
       *ngFor="let rueda of ruedas"
       [identificador]="rueda.identificador"
       [marca]="rueda.marca"
@@ -16,6 +21,14 @@
       (ruedaSeleccionada)="recibirSeleccionRueda($event)"
       >
     </app-rueda>
+    <app-puerta
+      *ngFor="let puerta of puertas"
+      [id_puerta]="puerta.id_puerta"
+      [codigo]="puerta.codigo"
+      (puertaSeleccionada)="recibirSeleccionPuerta($event)"
+      (estadoCambiado)="onEstadoCambiado($event)"
+      >
+    </app-puerta>
 
   </div>
 </div>

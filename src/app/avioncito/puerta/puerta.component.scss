@@ -1,0 +1,33 @@
+strong {
+  font-size: 30px;
+}
+
+.puerta {
+  padding: 30px;
+  border-bottom: 2px solid black;
+  display: grid;
+  grid-template-columns: 10% auto;
+
+  .left {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    .precio {
+      color: rgb(48, 230, 109);
+      font-style: italic
+    }
+  }
+}
+
+h4 {
+  color: rgb(70, 70, 109);
+}
+
+h3 {
+  color: rgb(148, 111, 105);
+}

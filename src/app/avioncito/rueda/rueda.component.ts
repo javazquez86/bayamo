@@ -10,7 +10,6 @@ export class RuedaComponent {
 @Input() identificador!: string;
 @Input() marca!: string;
 @Input() precio!: number;
-
 @Output() ruedaSeleccionada= new EventEmitter<any>();
 
 emitirSeleccion(){

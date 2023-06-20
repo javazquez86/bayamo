@@ -1,0 +1,18 @@
+<div class="puerta">
+  <div class="left">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMngQMAouABId2j6aFUR1utyH5FPWJAh25AF93XW-d_JlHBqm6kRyvT8cWxCtDxEEY7K0&usqp=CAU"
+      alt="">
+  </div>
+  <div class="right">
+    <h3>{{id_puerta}}</h3>
+    <h4 class="codigo">Codigo: {{codigo}}</h4>
+    <br>
+    <button class="btn btn-secondary" (click)="emitirSeleccionPuerta()">Seleccionar</button>
+    <!--<input type="radio" name="estado" [checked]="estado === 'cerrada'" (change)="emitirSeleccionPuerta('cerrada')"> Cerrada
+    <input type="radio" name="estado" [checked]="estado === 'abierta'" (change)="emitirSeleccionPuerta('abierta')"> Abierta-->
+    <input type="radio" name="estado" (change)="onEstadoChange('cerrada')"> Cerrada
+    <input type="radio" name="estado" (change)="onEstadoChange('abierta')"> Abierta
+
+  </div>
+</div>
